@@ -1,0 +1,16 @@
+/*!
+Theme Name: Theme WP
+Theme URI:
+Author: Jose Romero
+Author URI: https://lujo-studio.com
+Description: This is a theme for practice with wordpress
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html/
+Tags: practice, beginer
+Text Domain: theme_wp
+*/
+
+*{
+    background-color: lightgray;
+}

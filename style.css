@@ -11,6 +11,6 @@ Tags: practice, beginer
 Text Domain: theme_wp
 */
 
-*{
-    background-color: lightgray;
+body{
+    background-color: rgb(93, 184, 212);
 }

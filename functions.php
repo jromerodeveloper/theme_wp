@@ -20,5 +20,12 @@ if(!function_exists('themeWP_scripts')):
 
  wp_enqueue_script('jquery');
  wp_enqueue_script('scripts');
-
 endif;
+
+if(!function_exists('themeWP_setup')):
+    function themeWP_setup(){
+        add_theme_support('post-thumbnails');
+    }
+endif;
+
+add_action('after_setup_theme','themeWP_setup');

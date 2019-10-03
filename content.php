@@ -4,6 +4,10 @@
         <h2>
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </h2>
+        <?php the_permalink();?>
+        <?php the_post_thumbnail();?>
+        <?php the_post_thumbnail_url();?>
+        <img src="<?php echo get_the_post_thumbnail_url();?>" alt="<?php echo get_the_title();?>">
         <?php the_excerpt();?>
         <?php the_category();?>
         <p><?php the_category(', ');?></p>

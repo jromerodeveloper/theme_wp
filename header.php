@@ -9,6 +9,9 @@
 </head>
 <body>
     <header>
+        <div>
+           <a href="<?php echo esc_url(home_url('/'));?>">LOGO</a> 
+        </div>
         <nav>
             <ul>
                 <li>Item 1</li>

@@ -21,7 +21,7 @@
         <p><?php the_author();?></p>
         <p><?php the_author_posts_link();?></p>
         <div>
-        <?php the_content();?>
+        <?php //the_content();?>
         </div>
         <?php endwhile; else:?>
         <p>El contenido solicitado no existe</p>

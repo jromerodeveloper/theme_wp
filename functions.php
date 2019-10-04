@@ -29,3 +29,14 @@ if(!function_exists('themeWP_setup')):
 endif;
 
 add_action('after_setup_theme','themeWP_setup');
+
+if(!function_exists('themeWP_menus')):
+    function themeWP_menus(){
+        register_nav_menus(array(
+            'main_menu'=>__('Menú Principal','themeWP'),
+            'social_menu'=>__('Menú Redes Sociales','themeWP')
+        ));
+    }
+endif;
+
+add_action('init','themeWP_menus');

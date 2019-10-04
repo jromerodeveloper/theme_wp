@@ -12,13 +12,19 @@
         <div>
            <a href="<?php echo esc_url(home_url('/'));?>">LOGO</a> 
         </div>
+        <?php 
+        if(has_nav_menu('main_menu')):
+            wp_nav_menu(array(
+                'theme_location'=>'main_menu',
+                'container'=>'nav',
+                'container_clas'=>'Menu'
+            ));
+        else: ?>
         <nav>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
+            <ul>            
+                <?php wp_list_pages('title_li') ;?>
             </ul>
         </nav>
+        <?php endif;?>
     </header>
     <main>

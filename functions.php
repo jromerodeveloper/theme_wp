@@ -25,6 +25,14 @@ endif;
 if(!function_exists('themeWP_setup')):
     function themeWP_setup(){
         add_theme_support('post-thumbnails');
+
+        add_theme_support('html5',array(
+            'commet-list',
+            'commet-form',
+            'search-form',
+            'gallery',
+            'caption'
+        ));
     }
 endif;
 

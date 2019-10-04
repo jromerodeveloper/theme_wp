@@ -40,3 +40,28 @@ if(!function_exists('themeWP_menus')):
 endif;
 
 add_action('init','themeWP_menus');
+
+if(!function_exists('themeWP_register_sidebars')):
+    function themeWP_register_sidebars(){
+        register_sidebar(array(
+            'name'=>__('Sidebar Principal','themeWP'),
+            'id'=>'main_sidebar',
+            'description'=>__('Este es el sidebar principal','themeWP'),
+            'before_widget'=>'<article id="%1$s" class="Widget %2$s">',
+            'after_widget'=>'</article>',
+            'before_title'=>'<h3>',
+            'after_title'=>'</h3>'
+        ));
+        register_sidebar(array(
+            'name'=>__('Sidebar del Pie de Página','themeWP'),
+            'id'=>'footer_sidebar',
+            'description'=>__('Este es el sidebar del Footer','themeWP'),
+            'before_widget'=>'<article id="%1$s" class="Widget %2$s">',
+            'after_widget'=>'</article>',
+            'before_title'=>'<h3>',
+            'after_title'=>'</h3>'
+        ));
+    }
+endif;
+
+add_action('widgets_init','themeWP_register_sidebars');

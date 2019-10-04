@@ -15,6 +15,11 @@
         <div>
             <small>&copy;<?php echo date('Y');?> por Jose Romero</small>
         </div>
+        <?php
+        if(is_active_sidebar('footer_sidebar')):
+            dynamic_sidebar('footer_sidebar');
+        endif;
+        ?>
     </footer>
     <?php wp_footer();?>
 </body>

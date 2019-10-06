@@ -40,6 +40,16 @@ if(!function_exists('themeWP_setup')):
             'flex-height'=>true,
             'flex-width'=>true
         ));
+
+        add_theme_support('custom-background',array(
+            'default-color'=>'DDD',
+            'default-image'=>get_template_directory_uri().'/img/background-image.png',
+            'default-repeat'=>'repeat',
+            'default-position-x'=>'',
+            'default-position-y'=>'',
+            'default-size'=>'',
+            'default-attachment'=>'fixed'
+        ));
     }
 endif;
 

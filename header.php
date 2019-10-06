@@ -9,8 +9,14 @@
 </head>
 <body>
     <header class="Header">
-        <div>
-           <a href="<?php echo esc_url(home_url('/'));?>">LOGO</a> 
+        <div class="Logo">
+            <?php 
+            if(has_custom_logo()):
+                the_custom_logo();
+            else:
+                echo '<a href="'.esc_url(home_url('/')).'">'.get_bloginfo('name').'</a>';
+            endif;
+            ?>
         </div>
         <?php 
         if(has_nav_menu('main_menu')):

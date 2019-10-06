@@ -90,3 +90,5 @@ if(!function_exists('themeWP_register_sidebars')):
 endif;
 
 add_action('widgets_init','themeWP_register_sidebars');
+
+require_once get_template_directory().'/inc/custom-header.php';

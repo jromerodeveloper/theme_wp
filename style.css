@@ -11,6 +11,60 @@ Tags: practice, beginer
 Text Domain: theme_wp
 */
 
-body{
+html{
     background-color: rgb(93, 184, 212);
+    box-sizing: border-box;
+}
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.Header,
+.Main,
+.Footer{
+    border:thin solid #000;
+    margin-bottom: 1rem;
+}
+
+.Main{
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: 'content sidebar'
+                            'other sidebar';
+    
+}
+
+.Main>*{
+    background-color: #ccc;
+    color:#222;
+    padding: 1rem;
+}
+
+.Content{
+    grid-area:content;
+}
+
+.Content hr{
+    border: thick dotted greenyellow;
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.Sidebar{
+    grid-area:sidebar;
+}
+
+.Other{
+    grid-area:other;
+}
+
+.Widget, .Pagination{
+    background-color: #aaa;
+    margin-bottom: 2rem;
+    padding: 1rem;
 }

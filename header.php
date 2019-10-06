@@ -8,7 +8,7 @@
     <?php wp_head();?>
 </head>
 <body>
-    <header>
+    <header class="Header">
         <div>
            <a href="<?php echo esc_url(home_url('/'));?>">LOGO</a> 
         </div>
@@ -27,4 +27,4 @@
         </nav>
         <?php endif;?>
     </header>
-    <main>
+    <main class="Main">

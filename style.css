@@ -68,3 +68,9 @@ html{
     margin-bottom: 2rem;
     padding: 1rem;
 }
+
+.Error404{
+    font-size:5vw;
+    font-weight: bold;
+    text-align: center;
+}

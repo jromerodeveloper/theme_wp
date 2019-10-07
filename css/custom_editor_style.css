@@ -1,0 +1,9 @@
+body{
+    font-family: var(--main-font);
+}
+body a{
+    color: var(--link-color);
+}
+body a:hover{
+    color: var(--link-hover-color);
+}

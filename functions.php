@@ -50,6 +50,9 @@ if(!function_exists('themeWP_setup')):
             'default-size'=>'',
             'default-attachment'=>'fixed'
         ));
+
+        // Activa la actualización selectiva de widgets en el customize
+        add_theme_support('customize-selective-refresh-widgets');
     }
 endif;
 
@@ -92,3 +95,4 @@ endif;
 add_action('widgets_init','themeWP_register_sidebars');
 
 require_once get_template_directory().'/inc/custom-header.php';
+require_once get_template_directory().'/inc/customizer.php';

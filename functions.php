@@ -22,8 +22,13 @@ if(!function_exists('themeWP_scripts')):
  wp_enqueue_script('scripts');
 endif;
 
+add_action('wp_enqueue_scripts','themeWP_scripts');
+
 if(!function_exists('themeWP_setup')):
     function themeWP_setup(){
+        // Agregando traducciones al tema de WP
+        load_theme_textdomain('themeWP', get_template_directory().'/languages');
+
         add_theme_support('post-thumbnails');
 
         add_theme_support('html5',array(

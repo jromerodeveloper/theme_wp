@@ -102,3 +102,5 @@ add_action('widgets_init','themeWP_register_sidebars');
 
 require_once get_template_directory().'/inc/custom-header.php';
 require_once get_template_directory().'/inc/customizer.php';
+require_once get_template_directory().'/inc/custom-login.php';
+require_once get_template_directory().'/inc/custom-admin.php';

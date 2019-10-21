@@ -14,6 +14,16 @@
             <!-- Imprimir la fecha con el formato establecido en el Dashboard -->
             <p><?php the_time(get_option('date_format'));?></p>
             <p><?php the_author_posts_link();?></p>
+            <div>
+                <h3>Custom Fields & Metaboxes</h3>
+                <!-- Imprimir los CUSTOM FIELDS -->
+                <?php //the_meta();?>
+                <p><?php echo get_post_meta(get_the_ID(),'País',true);?></p>
+                <p><?php echo get_post_meta(get_the_ID(),'RUC',true);?></p>
+                <h3>ACF</h3>
+                <p><?php the_field('ideal_para');?></p>
+                <p><?php echo get_field('ideal_para');?></p>
+            </div>
         </article>
         <hr>
         <?php endwhile; else:?>

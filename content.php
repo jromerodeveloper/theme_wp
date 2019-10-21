@@ -1,7 +1,7 @@
     <article class="Content">
         <?php 
         // Eliminar parametros de loop anteriores
-        query_posts(null);
+        // query_posts(null);
         if(have_posts()):while(have_posts()):the_post();?>
         <article>    
             <?php the_post_thumbnail();?>
@@ -20,6 +20,7 @@
         <p>El contenido solicitado no existe</p>
         <?php endif;?>
         <?php wp_reset_postdata();?>
+        <?php wp_reset_query();?>
     </article>
     <section class="Pagination Other">
         <?php echo paginate_links();?>

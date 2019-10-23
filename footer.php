@@ -9,7 +9,18 @@
             ));
         endif;?>
         <div>
-            <small>&copy;<?php echo date('Y');?> por Jose Romero</small>
+        <p>
+            <small>
+                <?php 
+                if(get_option('themeWP_footer_text')!==''):
+                    echo esc_html(get_option('themeWP_footer_text'));
+                else:?>
+                    &copy;<?php echo date('Y');?> por Jose Romero
+                <?php
+                endif;
+                ?>
+            </small>
+        </p>
         </div>
         <?php
         if(is_active_sidebar('footer_sidebar')):

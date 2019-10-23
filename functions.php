@@ -113,3 +113,4 @@ require_once get_template_directory().'/inc/custom-admin.php';
 require_once get_template_directory() . '/inc/custom-pre-get-posts.php';
 // require_once get_template_directory() . '/inc/custom-metaboxes.php';
 require_once get_template_directory().'/inc/custom-theme-options.php';
+require_once get_template_directory().'/inc/custom-contact-form.php';

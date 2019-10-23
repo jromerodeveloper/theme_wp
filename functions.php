@@ -15,9 +15,9 @@ if(!function_exists('themeWP_scripts')):
         wp_register_style('style', get_stylesheet_directory_uri().'/style.css', array(), '1.0.0', 'all');
         
         wp_enqueue_style('style');
-       
+        
         wp_register_script('scripts', get_template_directory_uri().'/scripts.js', array(), '1.0.0', true);
-       
+        
         wp_enqueue_script('jquery');
         wp_enqueue_script('scripts');
     }
@@ -108,3 +108,7 @@ require_once get_template_directory().'/inc/custom-header.php';
 require_once get_template_directory().'/inc/customizer.php';
 require_once get_template_directory().'/inc/custom-login.php';
 require_once get_template_directory().'/inc/custom-admin.php';
+// require_once get_template_directory().'/inc/custom-post-types.php';
+// require_once get_template_directory().'/inc/custom-taxonomies.php';
+require_once get_template_directory() . '/inc/custom-pre-get-posts.php';
+// require_once get_template_directory() . '/inc/custom-metaboxes.php';

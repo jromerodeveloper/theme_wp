@@ -27,6 +27,13 @@ add_action('wp_enqueue_scripts','themeWP_scripts');
 
 if(!function_exists('themeWP_setup')):
     function themeWP_setup(){
+        //Soporte para traducciones
+        //https://developer.wordpress.org/themes/functionality/internationalization/
+        //https://make.wordpress.org/polyglots/handbook/Herramientas
+        //https://www.icanlocalize.com/tools/php_scanner
+        //https://poedit.net/
+        load_theme_textdomain('themeWP', get_template_directory().'/languages');
+
         add_theme_support('post-thumbnails');
 
         add_theme_support('html5',array(

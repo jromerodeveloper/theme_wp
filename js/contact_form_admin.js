@@ -21,6 +21,12 @@
                     url:contact_form.ajax_url,
                     success:data=>{
                         c(data)
+                        let res = JSON.parse(data)
+                        if(!res.err){
+                            let selectorId = '[data-contact-id="'+id+'"]'
+                            c(selectorId)
+                            d.querySelector(selectorId).parentElement.parentElement.remove()
+                        }
                     }
                 });
             }else{
